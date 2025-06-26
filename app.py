@@ -41,6 +41,7 @@ with col2:
     if st.session_state.responses:
         counter = Counter(st.session_state.responses)
         wordcloud = WordCloud(
+            font_path="STHeiti Light.ttc",
             width=800, height=400, background_color="white"
         ).generate_from_frequencies(counter)
 
