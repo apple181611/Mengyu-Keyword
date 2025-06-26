@@ -54,7 +54,6 @@ if st.session_state.show_wordcloud:
 
     counter = Counter(st.session_state.keywords)
     wordcloud = WordCloud(
-        font_path="simhei.ttf",  # 保证你的仓库里有 simhei.ttf 中文字体
         width=800, height=400,
         background_color="white"
     ).generate_from_frequencies(counter)
