@@ -9,14 +9,14 @@ if "responses" not in st.session_state:
     st.session_state.responses = []
 
 options = [
-    "AI 人工智能",
-    "生命科学",
-    "植物机器人",
-    "脑机接口",
-    "太空探索",
-    "编程与游戏开发",
-    "硬核造物",
-    "元宇宙与数字创作"
+    "AI",
+    "Life Science",
+    "Robots",
+    "NeuroScience",
+    "Soil",
+    "Coding",
+    "Maker",
+    "AR"
 ]
 
 col1, col2 = st.columns(2)
@@ -41,7 +41,6 @@ with col2:
     if st.session_state.responses:
         counter = Counter(st.session_state.responses)
         wordcloud = WordCloud(
-            font_path="STHeiti Light.ttc",
             width=800, height=400, background_color="white"
         ).generate_from_frequencies(counter)
 
